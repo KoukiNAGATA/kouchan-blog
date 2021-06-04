@@ -1,1 +1,1 @@
-web: gunicorn kouchan-blog.wsgi --log-file -
+web: gunicorn kouchan-blog:app --log-file -
