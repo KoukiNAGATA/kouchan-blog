@@ -21,11 +21,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'name',
-        'USER': 'user',
+        'NAME': 'kouchan-blog',
+        'USER': 'kouchan',
         'PASSWORD': '',
-        'HOST': 'host',
-        'PORT': '',
+        'HOST': 'db',
+        'PORT': '5432',
     }
 }
 
