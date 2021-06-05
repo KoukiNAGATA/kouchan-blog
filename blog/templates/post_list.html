@@ -15,7 +15,7 @@
               </a>
             </h2>
             <p>{{ post.created_at }}</p>
-            <p class="font-serif leading-relaxed mb-8">{{ post.body }}</p>
+            <p class="font-serif leading-relaxed mb-8">{{ post.body | truncatechars:50 }}</p>
             <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-800 border-opacity-75 mt-auto w-full">
               <a class="text-pink-400 inline-flex items-center"  href="{% url 'post_detail' post.id %}">
                 続きを読む。
