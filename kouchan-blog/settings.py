@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
+    'mdeditor',
 ]
 
 MIDDLEWARE = [
@@ -88,6 +89,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+MDEDITOR_CONFIGS = {
+    'default': {
+        'language': 'en',
+    }
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
@@ -111,7 +117,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')  # 追加
 
-# 画像などのメディアファイルがある場合
+# media files
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
