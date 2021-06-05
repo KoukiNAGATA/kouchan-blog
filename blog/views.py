@@ -1,5 +1,4 @@
 from django.views.generic import DetailView, ListView
-from django.template.response import TemplateResponse
 from blog.models import Post
 
 
@@ -8,6 +7,25 @@ class PostListView(ListView):
     ordering = "-created_at"
     template_name = "post_list.html"
     context_object_name = "posts"
+    paginate_by = 10
+
+
+class BlogListView(ListView):
+    model = Post
+    ordering = "-created_at"
+    template_name = "post_list.html"
+    context_object_name = "posts"
+    paginate_by = 10
+    queryset = Post.objects.filter(category=1)
+
+
+class NewsListView(ListView):
+    model = Post
+    ordering = "-created_at"
+    template_name = "post_list.html"
+    context_object_name = "posts"
+    paginate_by = 10
+    queryset = Post.objects.filter(category=2)
 
 
 class PostDetailView(DetailView):
@@ -15,11 +33,3 @@ class PostDetailView(DetailView):
     pk_url_kwarg = "post_id"
     template_name = "post_detail.html"
     context_object_name = "post"
-
-
-def post_list(request):
-    return TemplateResponse(
-        request,
-        "post_list.html",
-        {"posts": Post.objects.all()},
-    )
