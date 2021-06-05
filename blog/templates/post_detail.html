@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load markdown_extras %}
 {% block title %}{{ post.title }} - こうちゃんブログ。{% endblock %}
 
 {% block content %}
@@ -14,7 +14,7 @@
               </a>
             </h2>
             <p>{{ post.created_at }}</p>
-            <p class="leading-relaxed mb-8">{{ post.body | linebreaksbr | urlize}}</p>
+            <p class="leading-relaxed mb-8">{{ post.body | markdown | safe | linebreaksbr | urlize}}</p>
             <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-800 border-opacity-75 mt-auto w-full">
               <a class="text-pink-400 inline-flex items-center"  href="{% url 'post_list' %}">
                 一覧に戻る
