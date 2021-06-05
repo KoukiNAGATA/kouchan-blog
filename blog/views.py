@@ -16,7 +16,7 @@ class BlogListView(ListView):
     template_name = "post_list.html"
     context_object_name = "posts"
     paginate_by = 10
-    queryset = Post.objects.filter(category=1)
+    queryset = Post.objects.filter(category__name='blog')
 
 
 class NewsListView(ListView):
@@ -25,7 +25,7 @@ class NewsListView(ListView):
     template_name = "post_list.html"
     context_object_name = "posts"
     paginate_by = 10
-    queryset = Post.objects.filter(category=2)
+    queryset = Post.objects.filter(category__name='news')
 
 
 class PostDetailView(DetailView):
