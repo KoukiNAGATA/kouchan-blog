@@ -1,11 +1,11 @@
-{% load static %}
+{% load sass_tags %}
 <html lang="ja">
   <head>
     <title>{% block title %}{% endblock %}</title> 
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <link href="{% sass_src 'css/app.scss' %}" rel="stylesheet" type="text/css">
   </head>
 
   <body>
