@@ -39,11 +39,13 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'mdeditor',
     'sass_processor',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -116,6 +118,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 SASS_PROCESSOR_INCLUDE_FILE_PATTERN = r'^.+\.scss$'
+SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR, 'blog/static')
 SASS_PRECISION = 8
 SASS_OUTPUT_STYLE = 'compressed'
 SASS_TEMPLATE_EXTS = ['.html', '.haml']
@@ -146,9 +149,6 @@ except ImportError:
     pass
 
 if not DEBUG:
-    SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR, 'static')
     SECRET_KEY = os.environ['SECRET_KEY']
     import django_heroku
     django_heroku.settings(locals())
-else:
-    SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR, 'blog/static')
