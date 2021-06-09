@@ -39,13 +39,11 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'mdeditor',
     'sass_processor',
-    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -112,8 +110,6 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
@@ -140,7 +136,6 @@ DATABASES = {
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 ALLOWED_HOSTS = ['kouchan-blog.herokuapp.com', '127.0.0.1']
-STATIC_ROOT = 'staticfiles'
 DEBUG = False
 # Apply local settings
 try:
