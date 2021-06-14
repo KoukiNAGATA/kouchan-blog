@@ -6,15 +6,15 @@
 //markdown
 p {
   font-family: "Sawarabi Mincho";
+  color: #cecece;
 }
 
 h1 {
   font-family: "Sawarabi Gothic";
-  counter-reset: chapter;
   font-size: 1.8em;
-  border-style: solid;
   border-width: 0 0 1px 0;
   padding: 0.1em 0.25em;
+  color: #dfdfdf;
   position: relative;
   padding-left: 25px;
 }
@@ -22,8 +22,8 @@ h1 {
 h1:before {
   position: absolute;
   content: "";
-  bottom: -3px;
-  left: 0;
+  bottom: -2.5px;
+  left: -5px;
   width: 0;
   height: 0;
   border: none;
@@ -47,32 +47,11 @@ h1:first-letter {
 
 h2 {
   font-family: "Sawarabi Gothic";
-  counter-reset: sub-chapter;
   font-size: 1.5em;
   padding: 0.1em 0.25em;
   color: #dfdfdf;
   position: relative;
-  padding-left: 25px;
-}
-
-h2:before {
-  position: absolute;
-  content: "";
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border: none;
-  border-left: solid 15px transparent;
-  border-bottom: solid 15px #e86cac;
-}
-
-h2:after {
-  position: absolute;
-  content: "";
-  bottom: -3px;
-  left: 10px;
-  width: 100%;
+  /*線の種類（点線）2px 線色*/
   border-bottom: solid 3px #e86cac;
 }
 
@@ -83,10 +62,15 @@ h2:first-letter {
 
 h3 {
   font-family: "Sawarabi Gothic";
-  counter-reset: section;
+  font-size: 1.5em;
+  color: #dfdfdf;
+  /*線の種類（点線）2px 線色*/
+  border-bottom: dashed 2px #e86cac;
 }
 
 code {
+  border: solid 2px #aaaaaa;
+  width: 100%;
   font-family: Monaco, Menlo, "Courier New", monospace;
   font-size: 0.8rem;
   line-height: 1.4;
@@ -97,4 +81,19 @@ code {
   color: #fafafa;
   overflow: auto;
   white-space: pre;
+}
+
+blockquote {
+  position: relative;
+  padding: 0px 10px;
+  box-sizing: border-box;
+  font-style: italic;
+  background: #dadadada;
+  border-left: 4px solid #e86cac;
+  p {
+    padding: 0;
+    margin: 2px 0;
+    line-height: 1.7;
+    color: #555555;
+  }
 }

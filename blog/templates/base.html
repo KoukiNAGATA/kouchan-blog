@@ -10,10 +10,10 @@
 
   <body>
     <!-- Header -->
-    <header class="text-gray-400 bg-gray-900 body-font">
+    <header class="text-gray-400 bg-gray-900 header-dark fixed">
       <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a
-          class="flex title-font font-medium items-center text-white mb-4 md:mb-0" 
+          class="flex items-center text-white mb-4 md:mb-0" 
           href="{% url 'post_list' %}">
           <span class="ml-3 text-xl">こうちゃんブログ。</span>
         </a>
@@ -42,7 +42,7 @@
     {% endblock %}
 
     <!-- Footer -->
-    <footer class="text-gray-400 bg-gray-900 body-font">
+    <footer class="text-gray-400 bg-gray-900 footer-dark">
       <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
         <a 
           class="flex title-font font-medium items-center md:justify-start justify-center text-white" 

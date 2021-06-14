@@ -12,13 +12,14 @@
             {{ post.category }}
           </a>
         </span>
-        <h2 class="sm:text-3xl text-2xl mt-4 mb-4">
+        <h1 class="sm:text-3xl text-2xl mt-4 mb-4">
           <a href="{% url 'post_detail' post.id %}">            
             {{ post.title }}
           </a>
-        </h2>
+        </h1>
         <p>{{ post.created_at }}</p>
         <p class="mb-8">{{ post.body | markdown | safe | linebreaksbr}}</p>
+        <br/>
         <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-800 border-opacity-75 mt-auto w-full">
           <a class="text-pink-400 inline-flex items-center"  href="{% url 'post_list' %}">
             一覧に戻る
