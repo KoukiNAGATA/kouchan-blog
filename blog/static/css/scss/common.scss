@@ -3,6 +3,13 @@
   background-color: #1d1b1d;
 }
 
+a {
+  color: #bb6792;
+}
+a:hover {
+  color: #ec7cb6;
+}
+
 //markdown
 p {
   font-family: "Sawarabi Mincho";
@@ -17,6 +24,12 @@ h1 {
   color: #dfdfdf;
   position: relative;
   padding-left: 25px;
+  a {
+    color: #dfdfdf;
+  }
+  a:hover {
+    color: #ec7cb6;
+  }
 }
 
 h1:before {
@@ -28,7 +41,7 @@ h1:before {
   height: 0;
   border: none;
   border-left: solid 15px transparent;
-  border-bottom: solid 15px #e86cac;
+  border-bottom: solid 15px #ec7cb6;
 }
 
 h1:after {
@@ -37,12 +50,12 @@ h1:after {
   bottom: -3px;
   left: 10px;
   width: 100%;
-  border-bottom: solid 3px #e86cac;
+  border-bottom: solid 3px #ec7cb6;
 }
 
 h1:first-letter {
   font-size: 2em;
-  color: #e86cac;
+  color: #ec7cb6;
 }
 
 h2 {
@@ -52,12 +65,12 @@ h2 {
   color: #dfdfdf;
   position: relative;
   /*線の種類（点線）2px 線色*/
-  border-bottom: solid 3px #e86cac;
+  border-bottom: solid 3px #ec7cb6;
 }
 
 h2:first-letter {
   font-size: 1.6em;
-  color: #e86cac;
+  color: #ec7cb6;
 }
 
 h3 {
@@ -65,7 +78,7 @@ h3 {
   font-size: 1.5em;
   color: #dfdfdf;
   /*線の種類（点線）2px 線色*/
-  border-bottom: dashed 2px #e86cac;
+  border-bottom: dashed 2px #ec7cb6;
 }
 
 code {
@@ -87,7 +100,7 @@ blockquote {
   box-sizing: border-box;
   font-style: italic;
   background: #dadadada;
-  border-left: 4px solid #e86cac;
+  border-left: 4px solid #ec7cb6;
   p {
     padding: 0;
     margin: 2px 0;
@@ -183,11 +196,11 @@ blockquote {
 }
 
 .hljs-bullet,
-#content.hljs-selector-attr,
-#content.hljs-selector-class,
-#content.hljs-selector-id,
-#content.hljs-selector-pseudo,
-#content.hljs-selector-tag {
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-selector-pseudo,
+.hljs-selector-tag {
   color: #d7ba7d;
 }
 
