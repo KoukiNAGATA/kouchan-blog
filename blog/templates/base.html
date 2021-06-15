@@ -1,5 +1,5 @@
-{% load static %}
 <html lang="ja">
+  {% load static %}
   <head>
     <title>{% block title %}{% endblock %}</title> 
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
@@ -85,6 +85,10 @@
     </footer>
   </body>
 </html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
       showProcessingMessages: false, //Close js loading process information
