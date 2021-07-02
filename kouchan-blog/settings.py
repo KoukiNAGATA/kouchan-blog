@@ -140,8 +140,8 @@ DATABASES = {
 }
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-ALLOWED_HOSTS = ['kouchan-blog.herokuapp.com', 'admin.kouchan-blog.herokuapp.com',
-                 '127.0.0.1', 'admin.localhost', 'localhost']
+ALLOWED_HOSTS = ['admin.kouchan-blog.herokuapp.com',
+                 'kouchan-blog.herokuapp.com', '127.0.0.1', 'admin.localhost', 'localhost']
 DEBUG = False
 # Apply local settings
 try:
