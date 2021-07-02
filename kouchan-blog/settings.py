@@ -39,9 +39,11 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'mdeditor',
     'sass_processor',
+    'django_hosts',
 ]
 
 MIDDLEWARE = [
+    'django_hosts.middleware.HostsRequestMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -50,9 +52,13 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django_hosts.middleware.HostsResponseMiddleware',
 ]
 
 ROOT_URLCONF = 'kouchan-blog.urls'
+ROOT_HOSTCONF = 'kouchan-blog.hosts'
+DEFAULT_HOST = 'kouchan-blog'
+
 
 TEMPLATES = [
     {
@@ -134,7 +140,8 @@ DATABASES = {
 }
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-ALLOWED_HOSTS = ['kouchan-blog.herokuapp.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['kouchan-blog.herokuapp.com', 'admin.kouchan-blog.herokuapp.com',
+                 '127.0.0.1', 'admin.localhost', 'localhost']
 DEBUG = False
 # Apply local settings
 try:
