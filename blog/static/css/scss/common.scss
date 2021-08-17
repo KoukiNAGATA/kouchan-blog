@@ -7,7 +7,7 @@ a {
   color: #bb6792;
 }
 a:hover {
-  color: #ec7cb6;
+  color: $text-pink;
 }
 
 //markdown
@@ -21,14 +21,14 @@ h1 {
   font-size: 1.8em;
   border-width: 0 0 1px 0;
   padding: 0.1em 0.25em;
-  color: #dfdfdf;
+  color: $text-white;
   position: relative;
   padding-left: 25px;
   a {
-    color: #dfdfdf;
+    color: $text-white;
   }
   a:hover {
-    color: #ec7cb6;
+    color: $text-pink;
   }
 }
 
@@ -41,7 +41,7 @@ h1:before {
   height: 0;
   border: none;
   border-left: solid 15px transparent;
-  border-bottom: solid 15px #ec7cb6;
+  border-bottom: solid 15px $text-pink;
 }
 
 h1:after {
@@ -50,35 +50,35 @@ h1:after {
   bottom: -3px;
   left: 10px;
   width: 100%;
-  border-bottom: solid 3px #ec7cb6;
+  border-bottom: solid 3px $text-pink;
 }
 
 h1:first-letter {
   font-size: 2em;
-  color: #ec7cb6;
+  color: $text-pink;
 }
 
 h2 {
   font-family: "Sawarabi Gothic";
   font-size: 1.5em;
   padding: 0.1em 0.25em;
-  color: #dfdfdf;
+  color: $text-white;
   position: relative;
   /*線の種類（点線）2px 線色*/
-  border-bottom: solid 3px #ec7cb6;
+  border-bottom: solid 3px $text-pink;
 }
 
 h2:first-letter {
   font-size: 1.6em;
-  color: #ec7cb6;
+  color: $text-pink;
 }
 
 h3 {
   font-family: "Sawarabi Gothic";
   font-size: 1.5em;
-  color: #dfdfdf;
+  color: $text-white;
   /*線の種類（点線）2px 線色*/
-  border-bottom: dashed 2px #ec7cb6;
+  border-bottom: dashed 2px $text-pink;
 }
 
 code {
@@ -100,7 +100,7 @@ blockquote {
   box-sizing: border-box;
   font-style: italic;
   background: #dadadada;
-  border-left: 4px solid #ec7cb6;
+  border-left: 4px solid $text-pink;
   p {
     padding: 0;
     margin: 2px 0;

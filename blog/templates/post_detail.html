@@ -3,9 +3,9 @@
 {% block title %}{{ post.title }} - こうちゃんブログ。{% endblock %}
 
 {% block content %}
-<section class="py-36 md:py-24 text-gray-400 bg-gray-900 body-font overflow-hidden body-background">
-  <div class="container px-5 mx-auto">
-    <div class="flex flex-wrap -m-12">
+<section class="container mx-auto py-36 md:py-24 text-gray-400 bg-gray-900 body-font overflow-hidden body-background">
+  <div class="px-5">
+    <div class="container mx-auto flex flex-wrap -m-12">
       <div class="p-12 w-screen md:w-3/4 flex flex-col items-start">
         <span class="inline-block py-1 px-2 rounded bg-gray-800 text-opacity-75 text-xs font-medium tracking-widest">
           <a href="/{{ post.category }}">   
@@ -18,9 +18,9 @@
           </a>
         </h1>
         <p>{{ post.created_at }}</p>
-        <p class="mb-8">{{ post.body | markdown | safe | linebreaksbr}}</p>
+        <p class="mb-8">{{ post.body | urlize | markdown | safe | linebreaksbr}}</p>
         <br/>
-        <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-800 border-opacity-75 mt-auto w-full">
+        <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-white-800 border-opacity-75 mt-auto w-full">
           <a class="text-pink-400 inline-flex items-center"  href="{% url 'post_list' %}">
             一覧に戻る
           </a>
