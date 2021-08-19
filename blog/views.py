@@ -4,46 +4,36 @@ from blog.models import Post
 
 class CommonListView(ListView):
     """ListViewのテンプレート"""
+    model = Post
+    template_name = "post_list.html"
+    paginate_by = 10
 
     def get_context_data(self, **kw):
         context = super().get_context_data(**kw)
-        context['posts_all'] = Post.objects.all()
+        context['posts_all'] = Post.objects.order_by('-created_at').all()
         return context
 
 
 class PostListView(CommonListView):
-    model = Post
-    ordering = "-created_at"
-    template_name = "post_list.html"
-    paginate_by = 10
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['posts'] = Post.objects.all()
+    def get_context_data(self, **kw):
+        context = super().get_context_data(**kw)
+        context['posts'] = Post.objects.order_by('-created_at').all()
         return context
 
 
 class BlogListView(CommonListView):
-    model = Post
-    ordering = "-created_at"
-    template_name = "post_list.html"
-    paginate_by = 10
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['posts'] = Post.objects.filter(category__name='blog')
+    def get_context_data(self, **kw):
+        context = super().get_context_data(**kw)
+        context['posts'] = Post.objects.order_by(
+            '-created_at').filter(category__name='blog')
         return context
 
 
 class NewsListView(CommonListView):
-    model = Post
-    ordering = "-created_at"
-    template_name = "post_list.html"
-    paginate_by = 10
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['posts'] = Post.objects.filter(category__name='news')
+    def get_context_data(self, **kw):
+        context = super().get_context_data(**kw)
+        context['posts'] = Post.objects.order_by(
+            '-created_at').filter(category__name='news')
         return context
 
 
@@ -56,5 +46,5 @@ class PostDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['posts_all'] = Post.objects.all()
+        context['posts_all'] = Post.objects.order_by('-created_at').all()
         return context
