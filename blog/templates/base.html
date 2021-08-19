@@ -43,15 +43,15 @@
 
     <!-- Body -->
     <div class="flex flex-wrap">
-      <article class="w-full lg:w-3/4">
+      <article class="w-full lg:w-3/4 body-background">
         {% block content %}
         {% endblock %}
       </article>
 
       <!-- Sidebar -->
-      <aside class="py-36 w-full lg:w-1/4 body-background text-white container mx-auto">
-        <h2>サイドバー: 新着記事一覧</h2>
-        {% for post in posts %}
+      <aside class="py-36 w-full lg:w-1/4 text-white container mx-auto body-background sidebar-dark">
+        <h2>新着記事一覧</h2>
+        {% for post in posts_all %}
           <h3>
             <a href="{% url 'post_detail' post.id %}" class="text-gray-300">            
               {{ post.title }}
