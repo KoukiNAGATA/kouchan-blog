@@ -2,7 +2,16 @@ from django.views.generic import DetailView, ListView
 from blog.models import Post
 
 
-class PostListView(ListView):
+class CommonListView(ListView):
+    """ListViewのテンプレート"""
+
+    def get_context_data(self, **kw):
+        context = super().get_context_data(**kw)
+        context['posts_all'] = Post.objects.all()
+        return context
+
+
+class PostListView(CommonListView):
     model = Post
     ordering = "-created_at"
     template_name = "post_list.html"
@@ -11,11 +20,10 @@ class PostListView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['posts'] = Post.objects.all()
-        context['posts_all'] = Post.objects.all()
         return context
 
 
-class BlogListView(ListView):
+class BlogListView(CommonListView):
     model = Post
     ordering = "-created_at"
     template_name = "post_list.html"
@@ -24,11 +32,10 @@ class BlogListView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['posts'] = Post.objects.filter(category__name='blog')
-        context['posts_all'] = Post.objects.all()
         return context
 
 
-class NewsListView(ListView):
+class NewsListView(CommonListView):
     model = Post
     ordering = "-created_at"
     template_name = "post_list.html"
@@ -37,7 +44,6 @@ class NewsListView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['posts'] = Post.objects.filter(category__name='news')
-        context['posts_all'] = Post.objects.all()
         return context
 
 

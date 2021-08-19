@@ -75,10 +75,18 @@ h2:first-letter {
 
 h3 {
   font-family: "Sawarabi Gothic";
+  padding: 0.1em 0.25em;
+  margin-bottom: 0.5em;
   font-size: 1.5em;
   color: $text-white;
   /*線の種類（点線）2px 線色*/
   border-bottom: dashed 2px $text-pink;
+}
+
+h4 {
+  font-family: "Sawarabi Gothic";
+  font-size: 1.3em;
+  color: $text-white;
 }
 
 code {

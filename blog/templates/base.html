@@ -50,14 +50,21 @@
 
       <!-- Sidebar -->
       <aside class="py-36 w-full lg:w-1/4 text-white container mx-auto body-background sidebar-dark">
-        <h2>新着記事一覧</h2>
+        <h3>新着記事一覧</h3>
         {% for post in posts_all %}
-          <h3>
+          <h4>
             <a href="{% url 'post_detail' post.id %}" class="text-gray-300">            
               {{ post.title }}
             </a>
-          </h3>
+          </h4>
         {% endfor %}
+        <br/>
+        <!-- Twitter -->
+        <h3>Twitter</h3>
+        <a class="twitter-timeline" data-height="400" data-theme="dark" href="https://twitter.com/NAGATAChannel?ref_src=twsrc%5Etfw">
+        </a> 
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
+        </script>
       </aside>
     </div>
 
