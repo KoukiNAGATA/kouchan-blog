@@ -1,4 +1,15 @@
 .sidebar-dark {
   right: 0;
   overflow: auto;
+  padding-right: 2.5em;
+  .lineclamp {
+    // 1行こえたら3点リーダー
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+  .twitter-wrapper {
+    padding-top: 2.5em;
+  }
 }

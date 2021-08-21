@@ -59,17 +59,18 @@
       <aside class="py-12 w-full lg:w-1/4 text-white container mx-auto body-background sidebar-dark">
         <h3>新着記事一覧</h3>
         {% for post in posts_all %}
-          <h4>
+          <h4 class="lineclamp">
             <a href="{% url 'post_detail' post.id %}" class="text-gray-300">            
               {{ post.title }}
             </a>
           </h4>
         {% endfor %}
-        <br/>
         <!-- Twitter -->
-        <h3>Twitter</h3>
-        <a class="twitter-timeline" data-height="400" data-theme="dark" href="https://twitter.com/NAGATAChannel?ref_src=twsrc%5Etfw">
-        </a> 
+        <div class = "twitter-wrapper">
+          <h3>Twitter</h3>
+          <a class="twitter-timeline" data-height="400" data-theme="dark" href="https://twitter.com/NAGATAChannel?ref_src=twsrc%5Etfw">
+          </a> 
+        </div>
       </aside>
     </div>
 
