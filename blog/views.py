@@ -25,7 +25,7 @@ class BlogListView(CommonListView):
     def get_context_data(self, **kw):
         context = super().get_context_data(**kw)
         context['posts'] = Post.objects.order_by(
-            '-created_at').filter(category__name='blog')
+            '-created_at').filter(category__name='Blog')
         return context
 
 
@@ -33,7 +33,7 @@ class NewsListView(CommonListView):
     def get_context_data(self, **kw):
         context = super().get_context_data(**kw)
         context['posts'] = Post.objects.order_by(
-            '-created_at').filter(category__name='news')
+            '-created_at').filter(category__name='News')
         return context
 
 

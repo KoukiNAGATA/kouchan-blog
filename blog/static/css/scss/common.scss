@@ -1,13 +1,26 @@
 // 各ページ共通定義
 .body-background {
-  background-color: #1f1f1f;
+  background-color: $primary-90;
 }
 
 a {
-  color: #bb6792;
+  color: $text-pink-75;
+  &:hover {
+    color: $text-pink;
+    transition: 0.5s;
+  }
 }
-a:hover {
-  color: $text-pink;
+
+.label-pink {
+  background: $primary;
+  border-color: $text-pink-75;
+  border-width: 1px;
+  border-radius: 2em;
+  padding: 0.3em 1em;
+  &:hover {
+    border-color: $text-pink;
+    transition: 0.5s;
+  }
 }
 
 //markdown
