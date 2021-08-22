@@ -50,5 +50,6 @@ class PostDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['posts_all'] = Post.objects.order_by('-created_at').all()
+        context['posts_all'] = Post.objects.order_by(
+            '-created_at').exclude(category__name='Draft')
         return context
