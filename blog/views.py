@@ -45,7 +45,7 @@ class PostDetailView(DetailView):
     model = Post
     pk_url_kwarg = "post_id"
     template_name = "post_detail.html"
-    # post_idはこちらで持っておく
+    # postはこちらで持っておく
     context_object_name = "post"
 
     def get_context_data(self, **kwargs):

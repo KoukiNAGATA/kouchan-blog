@@ -1,5 +1,6 @@
 from django.db import models
 from mdeditor.fields import MDTextField
+import uuid
 
 
 class Category(models.Model):
@@ -10,6 +11,7 @@ class Category(models.Model):
 
 
 class Post(models.Model):
+    id = models.UUIDField(default=uuid.uuid4, primary_key=True, editable=False)
     title = models.CharField(
         "タイトル", max_length=50,
     )
