@@ -141,7 +141,7 @@ DATABASES = {
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 ALLOWED_HOSTS = [
-    '.koukinagata.info',
+    'koukinagata.info',
     '127.0.0.1',
     'admin.localhost',
     'localhost'
@@ -157,3 +157,4 @@ if not DEBUG:
     SECRET_KEY = os.environ['SECRET_KEY']
     import django_heroku
     django_heroku.settings(locals())
+    SECURE_SSL_REDIRECT = True
