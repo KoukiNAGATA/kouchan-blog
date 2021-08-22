@@ -11,8 +11,6 @@ class Category(models.Model):
 
 
 class Post(models.Model):
-    # id = models.UUIDField(default=uuid.uuid4, primary_key=True, editable=False)
-    # postgres対応
     id = models.UUIDField(default=uuid.uuid4, primary_key=True, editable=False)
     title = models.CharField(
         "タイトル", max_length=50,
