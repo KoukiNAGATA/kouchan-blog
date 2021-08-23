@@ -3,12 +3,9 @@
   background-color: $primary-90;
 }
 
-a {
-  color: $text-pink-75;
-  &:hover {
-    color: $text-pink;
-    transition: 0.5s;
-  }
+.rectangle-shadow {
+  border-radius: 4px;
+  box-shadow: 0px 1px 6px $text-white-20;
 }
 
 .label-pink {
@@ -23,7 +20,15 @@ a {
   }
 }
 
-//markdown
+// 文字
+a {
+  color: $text-pink-75;
+  &:hover {
+    color: $text-pink;
+    transition: 0.5s;
+  }
+}
+
 p {
   font-family: "Sawarabi Mincho";
   color: #cecece;
@@ -102,8 +107,16 @@ h4 {
   color: $text-white;
 }
 
+// 画像
+img {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0px 1px 6px $text-white-20;
+}
+
+// コード
 code {
-  border: solid 2px #aaaaaa;
   width: 100%;
   font-family: Monaco, Menlo, "Courier New", monospace;
   font-size: 0.8rem;
@@ -113,8 +126,12 @@ code {
   white-space: pre;
   overflow-x: auto; // はみ出たら横スクロール
   -webkit-overflow-scrolling: touch;
+  border-radius: 4px;
+  padding: 1.5em;
+  box-shadow: 0px 1px 6px $text-white-20;
 }
 
+// 引用
 blockquote {
   position: relative;
   padding: 0px 10px;
@@ -122,11 +139,12 @@ blockquote {
   font-style: italic;
   border-radius: 4px;
   border-left: 4px solid $text-pink;
-  box-shadow: 0px 0px 5px silver;
+  box-shadow: 0px 1px 6px $text-white-20;
   p {
     padding: 0;
     margin: 4px 0;
     line-height: 1.7;
+    color: $text-white-75;
   }
 }
 
