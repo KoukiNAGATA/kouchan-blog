@@ -110,9 +110,14 @@ h4 {
 // 画像
 img {
   width: 80%;
+  height: auto;
   margin: 0 auto;
   border-radius: 4px;
   box-shadow: 0px 1px 6px $text-white-20;
+}
+
+.icon {
+  width: 100%;
 }
 
 // コード
