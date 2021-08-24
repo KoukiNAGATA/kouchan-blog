@@ -44,9 +44,9 @@ h1 {
   padding-left: 25px;
   a {
     color: $text-white;
-  }
-  a:hover {
-    color: $text-pink;
+    &:hover {
+      color: $text-pink;
+    }
   }
 }
 
