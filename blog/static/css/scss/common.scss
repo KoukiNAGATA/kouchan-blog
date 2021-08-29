@@ -1,5 +1,6 @@
 // 各ページ共通定義
 .init {
+  font-family: "Sawarabi Gothic";
   -webkit-font-smoothing: antialiased;
   background: #f9f9f9;
   min-width: 100vw;
@@ -11,11 +12,6 @@
 
 .body-background {
   background-color: $primary-90;
-}
-
-.rectangle-shadow {
-  border-radius: 4px;
-  box-shadow: 0px 1px 6px $text-white-20;
 }
 
 .label-pink {
@@ -45,7 +41,6 @@ p {
 }
 
 h1 {
-  font-family: "Sawarabi Gothic";
   font-size: 1.8em;
   border-width: 0 0 1px 0;
   padding: 0.1em 0.25em;
@@ -87,7 +82,6 @@ h1:first-letter {
 }
 
 h2 {
-  font-family: "Sawarabi Gothic";
   font-size: 1.5em;
   padding: 0.1em 0.25em;
   color: $text-white;
@@ -102,7 +96,6 @@ h2:first-letter {
 }
 
 h3 {
-  font-family: "Sawarabi Gothic";
   padding: 0.1em 0.25em;
   margin-bottom: 0.5em;
   font-size: 1.5em;
@@ -112,18 +105,19 @@ h3 {
 }
 
 h4 {
-  font-family: "Sawarabi Gothic";
   font-size: 1.3em;
   color: $text-white;
 }
 
-// 画像
-img {
-  width: 80%;
-  height: auto;
-  margin: 0 auto;
-  border-radius: 4px;
-  box-shadow: 0px 1px 6px $text-white-20;
+// markdown
+.attr_list {
+  img {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0px 1px 6px $text-white-20;
+  }
 }
 
 .icon {

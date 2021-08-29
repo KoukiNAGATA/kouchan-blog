@@ -1,22 +1,12 @@
 {% extends 'base.html' %}
 {% load markdown_extras %}
-{% block title %}{{ post.title }} - こうちゃんブログ。{% endblock %}
+{% block title %}{{ post.title }} - KoukiNAGATA{% endblock %}
+{% block header %}{{post.title}}{% endblock %}
 
 {% block content %}
 <section class="py-12 text-gray-400 body-font overflow-hidden">
   <div class="lg:px-12 container mx-auto flex flex-wrap -m-12">
     <div class="p-6 lg:p-12 md:w-3/4 flex flex-col items-start">
-      <span class="inline-block py-1 px-2 text-xs font-medium tracking-widest">
-        <a href="/{{ post.category }}" class="label-pink">   
-          {{ post.category }}
-        </a>
-      </span>
-      <h1 class="sm:text-3xl text-2xl mt-4 mb-4">
-        <a href="{% url 'post_detail' post.id %}">            
-          {{ post.title }}
-        </a>
-      </h1>
-      <p>{{ post.created_at }}</p>
       <!-- Google Ads -->
       <ins class="adsbygoogle"
         style="display:block"
@@ -26,7 +16,7 @@
         data-full-width-responsive="true">
       </ins>
       <p class="mb-8">{{ post.body | markdown | safe | linebreaksbr}}</p>
-      <br/>
+      <p class="w-full text-right mb-8">{{ post.created_at }}</p>
       <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-white-800 border-opacity-50 w-full">
         <a class="text-pink-400 inline-flex items-center"  href="{% url 'post_list' %}">
           一覧に戻る

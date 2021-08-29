@@ -50,10 +50,15 @@
           </a>
         </nav>
       </div>
-      <div class="w-full header-dark__cover-image">
+      <!-- カバー画像 -->
+      <div class="w-full relative">
+        <span class="w-full absolute header-dark__header-title text-2xl md:text-5xl text-center">
+          {% block header %}
+          {% endblock %}
+        </span>
         <picture>
-          <source srcset="{% static 'img/header.webp' %}" type="image/webp" />
-          <img src="{% static 'img/header.jpg' %}" alt="" />
+          <source srcset="{% static 'img/header.webp' %}" type="image/webp" class="w-full opacity-30" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;" />
+          <img src="{% static 'img/header.jpg' %}" alt="" class="w-full opacity-30" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;" />
         </picture>
       </div>
     </header>
