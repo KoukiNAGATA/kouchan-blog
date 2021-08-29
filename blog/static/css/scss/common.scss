@@ -1,4 +1,21 @@
 // 各ページ共通定義
+.init {
+  -webkit-font-smoothing: antialiased;
+  background: #f9f9f9;
+  min-width: 100vw;
+  min-height: 100vh;
+  color: $text-black;
+  overflow: hidden;
+  max-width: 100%;
+  // paddingを幅に含める
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  // 改行
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+
 .body-background {
   background-color: $primary-90;
 }

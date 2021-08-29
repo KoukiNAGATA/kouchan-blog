@@ -22,9 +22,9 @@
     <link rel="stylesheet" href="{% static 'css/app.css' %}" type="text/css">
   </head>
 
-  <body>
+  <body class="init body-background">
     <!-- Header -->
-    <header class="text-gray-400 bg-gray-900 header-dark">
+    <header class="text-gray-400 header-dark">
       <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a
           class="flex items-center text-white hover:text-white mb-4 md:mb-0" 
@@ -48,13 +48,13 @@
 
     <!-- Body -->
     <div class="flex flex-wrap">
-      <article class="w-full lg:w-3/4 body-background">
+      <article class="w-full lg:w-3/4">
         {% block content %}
         {% endblock %}
       </article>
 
       <!-- Sidebar -->
-      <aside class="py-12 w-full lg:w-1/4 text-white container mx-auto body-background sidebar-dark">
+      <aside class="py-12 px-6 w-full lg:w-1/4 text-white container mx-auto sidebar-dark">
         <h3>新着記事一覧</h3>
         {% for post in posts_all %}
           <h4 class="lineclamp">

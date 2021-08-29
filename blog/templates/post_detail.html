@@ -4,8 +4,8 @@
 
 {% block content %}
 <section class="py-12 text-gray-400 body-font overflow-hidden">
-  <div class="px-12 container mx-auto flex flex-wrap -m-12">
-    <div class="p-12 w-screen md:w-3/4 flex flex-col items-start">
+  <div class="lg:px-12 container mx-auto flex flex-wrap -m-12">
+    <div class="p-6 lg:p-12 md:w-3/4 flex flex-col items-start">
       <span class="inline-block py-1 px-2 text-xs font-medium tracking-widest">
         <a href="/{{ post.category }}" class="label-pink">   
           {{ post.category }}
@@ -27,7 +27,7 @@
       </ins>
       <p class="mb-8">{{ post.body | markdown | safe | linebreaksbr}}</p>
       <br/>
-      <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-white-800 border-opacity-75 mt-auto w-full">
+      <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-white-800 border-opacity-50 w-full">
         <a class="text-pink-400 inline-flex items-center"  href="{% url 'post_list' %}">
           一覧に戻る
         </a>
