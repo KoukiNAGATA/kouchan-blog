@@ -49,7 +49,13 @@ class PostDetailView(DetailView):
     context_object_name = "post"
 
     def get_context_data(self, **kwargs):
+        # 下書き以外で最新の10件を表示
         context = super().get_context_data(**kwargs)
         context['posts_all'] = Post.objects.order_by(
             '-created_at').exclude(category__name='Draft')
         return context
+
+
+class AboutView(CommonListView):
+    model = Post
+    template_name = "about.html"
