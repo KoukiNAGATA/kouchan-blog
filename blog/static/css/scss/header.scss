@@ -1,6 +1,10 @@
 // header
 .header-dark {
   background-color: $primary;
-  width: 100%;
   z-index: 5;
+  &__cover-image {
+    object-fit: cover;
+    width: 100vw;
+    padding: 0;
+  }
 }

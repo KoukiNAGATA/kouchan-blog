@@ -4,6 +4,7 @@
   <head>
     <title>{% block title %}{% endblock %}</title> 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3053226401219063" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
     <link rel="dns-prefetch" href="//fonts.googleapis.com/">
     <link rel="dns-prefetch" href="//fonts.gtatic.com/">
@@ -24,7 +25,7 @@
 
   <body class="init body-background">
     <!-- Header -->
-    <header class="text-gray-400 header-dark">
+    <header class="text-gray-400 header-dark w-full flex flex-wrap flex-col">
       <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a
           class="flex items-center text-white hover:text-white mb-4 md:mb-0" 
@@ -48,6 +49,12 @@
             About
           </a>
         </nav>
+      </div>
+      <div class="w-full header-dark__cover-image">
+        <picture>
+          <source srcset="{% static 'img/header.webp' %}" type="image/webp" />
+          <img src="{% static 'img/header.jpg' %}" alt="" />
+        </picture>
       </div>
     </header>
 
@@ -144,8 +151,6 @@
 </html>
 <!-- Twitter -->
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<!-- highlight.js -->
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
 <script>
   hljs.initHighlightingOnLoad();
 </script>
