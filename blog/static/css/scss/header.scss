@@ -15,4 +15,11 @@
     -ms-user-select: none;
     user-select: none;
   }
+  &__header-text {
+    color: $text-white-75;
+    &:hover {
+      transition: 0.5s;
+      color: white;
+    }
+  }
 }

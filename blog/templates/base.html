@@ -28,23 +28,23 @@
     <header class="text-gray-400 header-dark w-full flex flex-wrap flex-col">
       <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a
-          class="flex items-center text-white hover:text-white mb-4 md:mb-0" 
+          class="flex items-center text-white hover:text-white mb-4 md:mb-0 header-dark__text" 
           href="{% url 'post_list' %}">
-          <span class="ml-3 text-xl">こうちゃんブログ。</span>
+          <span class="ml-3 text-xl">KoukiNAGATAのページ。</span>
         </a>
         <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-white-800	flex flex-wrap items-center text-base justify-center">
           <a 
-            class="mx-5 text-gray-400 hover:text-white"
+            class="mx-5 header-dark__header-text"
             href="{% url 'news_list' %}">
             News
           </a>
           <a 
-            class="mx-5 text-gray-400 hover:text-white"
+            class="mx-5 header-dark__header-text"
             href="{% url 'blog_list' %}">
             Blog
           </a>
           <a 
-            class="mx-5 text-gray-400 hover:text-white"
+            class="mx-5 header-dark__header-text"
             href="{% url 'about' %}">
             About
           </a>
@@ -58,7 +58,7 @@
         </span>
         <picture>
           <source srcset="{% static 'img/header.webp' %}" type="image/webp" class="w-full opacity-40" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;" />
-          <img src="{% static 'img/header.png' %}" alt="" class="w-full opacity-40" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;" />
+          <img src="{% static 'img/header.png' %}" class="w-full opacity-40" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;" />
         </picture>
       </div>
     </header>
@@ -112,7 +112,7 @@
           class="flex title-font font-medium items-center md:justify-start justify-center text-white hover:text-white" 
           href="{% url 'post_list' %}"
         >
-          <span class="ml-3 text-xl">こうちゃんブログ。</span>
+          <span class="ml-3 text-xl">KoukiNAGATAのページ。</span>
         </a>
         <p class="text-sm text-gray-400 ml-4 pl-4 py-2 mt-0">
           © 2021 KoukiNAGATA
