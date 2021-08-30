@@ -18,7 +18,7 @@ from django.urls import path
 from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.conf import settings
-from blog.views import PostDetailView, PostListView, NewsListView, BlogListView
+from blog.views import PostDetailView, PostListView, NewsListView, BlogListView, AboutView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,6 +27,7 @@ urlpatterns = [
     path('', PostListView.as_view(), name="post_list"),
     path('news/', NewsListView.as_view(), name="news_list"),
     path('blog/', BlogListView.as_view(), name="blog_list"),
+    path('about/', AboutView.as_view(), name="about"),
     url(r'mdeditor/', include('mdeditor.urls'))
 ]
 

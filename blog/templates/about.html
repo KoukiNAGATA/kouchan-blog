@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}KoukiNAGATA{% endblock %}
+{% block header %}KoukiNAGATA{% endblock %}
+
+{% block content %}
+<section class="py-12 overflow-hidden max-w-screen flex mx-4">
+  <div class="flex flex-col w-full lg:w-2/3 mx-auto py-8 portfolio">
+    <picture class="portfolio__portfolio-photo">
+      <source srcset="{% static 'img/icon.webp' %}" type="image/webp" class="w-2/3 lg:w-1/3 mx-auto" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;" />
+      <img src="{% static 'img/icon.png' %}" class="w-2/3 lg:w-1/3 mx-auto" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;" />
+    </picture>
+    <h4 class="w-full mx-auto text-center portfolio__portfolio-title">
+      KoukiNAGATA
+    </h4>
+    <div class="px-4 lg:px-8 pt-8 w-full lg:w-2/3">
+      <h2>INFORMATION</h2>
+      <p>永田　昂輝(ながた　こうき)<br/>
+        1999年2月7日生<br/>
+        2018年 京都大学工学部情報学科入学<br/>
+        貯金残高は一桁万円。<br/>
+        趣味は野球観戦(阪神)、アニメ鑑賞、筋トレ。
+      </p>
+      <h2>Products</h2>
+      <p>これまでのリリース紹介。</p>
+      <div class="portfolio__list-wrapper">
+        <div class="portfolio__white-line"></div>
+        <div class="portfolio__list-item-wrapper">
+          <div class="portfolio__list-bullet"></div>
+          <div class="portfolio__list-item">
+            <h4>
+              Coming Soon ...
+            </h4>
+          </div>
+        </div>
+        <div class="portfolio__list-item-wrapper">
+          <div class="portfolio__list-bullet"></div>
+          <div class="portfolio__list-item">
+            <h4>
+              <a href="{% url 'post_list' %}" class="text-gray-300">
+                KoukiNAGATAのページ。
+              </a>
+            </h4>
+            <p>2021.08〜<br />これ。ブログ、その他お知らせ用。</p>
+          </div>
+        </div>
+      </div>
+      <div class="md-detail">
+        <h2>Skills</h2>
+        <p>もの作れる程度の熟練度のものだけ抜粋。</p>
+        <h4 class="my-4">機械学習・データ分析</h4>
+        <ul>
+          <li>Python</li>
+          <ul>
+            <li>scikit-learn</li>
+            <li>PyTorch</li>
+          </ul>
+        </ul>
+        <h4 class="my-4">WEB</h4>
+        <ul>
+          <li>フロントエンド</li>
+          <ul>
+            <li>Vue.js</li>
+            <li>React</li>
+            <li>TypeScript</li>
+          </ul>
+          <li>バックエンド</li>
+          <ul>
+            <li>Django</li>
+            <li>flask</li>
+          </ul>
+          <li>デザイン</li>
+          <ul>
+            <li>tailwindcss</li>
+            <li>figma</li>
+          </ul>
+        </ul>
+        <h4 class="my-4">その他</h4>
+        <ul>
+          <li>競プロ</li>
+          <ul>
+            <li>C++(AtCoder:
+              <a
+                href="https://atcoder.jp/users/dragondance"
+                target="_blank"
+                rel="noopener noreferrer"
+                alt="AtCoder"
+              >dragondance
+            </a>)
+          </li>
+          </ul>
+          <li>Unity</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

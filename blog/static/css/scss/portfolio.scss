@@ -1,0 +1,54 @@
+// portfolio
+.portfolio {
+  background: $primary-90;
+  border-radius: 4px;
+  box-shadow: 0px 1px 6px $text-white-20;
+  color: $text-white;
+  &__portfolio-title {
+    font-size: 2em;
+    font-weight: 700;
+  }
+  &__portfolio-photo {
+    transition-duration: 0.5s;
+    &:hover {
+      transform: scale(1.1, 1.1);
+      transition-duration: 0.5s;
+    }
+  }
+  // 線付きリスト
+  &__list-wrapper {
+    position: relative;
+  }
+  &__list-item-wrapper {
+    margin-top: 10px;
+    position: relative;
+  }
+  &__list-item {
+    display: table-row;
+    vertical-align: middle;
+  }
+  // 玉
+  &__list-bullet {
+    z-index: 1;
+    float: left;
+    margin-right: 20px;
+    background: $text-pink;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 100px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+  }
+  // 白線
+  &__white-line {
+    z-index: 0;
+    background: #fff;
+    top: 0px;
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    left: 15px;
+  }
+}

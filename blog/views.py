@@ -22,6 +22,7 @@ class PostListView(CommonListView):
         context = super().get_context_data(**kw)
         context['posts'] = Post.objects.order_by(
             '-created_at').exclude(category__name='Draft')
+        context['title'] = "TOP"
         return context
 
 
@@ -30,6 +31,7 @@ class BlogListView(CommonListView):
         context = super().get_context_data(**kw)
         context['posts'] = Post.objects.order_by(
             '-created_at').filter(category__name='Blog')
+        context['title'] = "Blog"
         return context
 
 
@@ -38,6 +40,7 @@ class NewsListView(CommonListView):
         context = super().get_context_data(**kw)
         context['posts'] = Post.objects.order_by(
             '-created_at').filter(category__name='News')
+        context['title'] = "News"
         return context
 
 
@@ -49,7 +52,18 @@ class PostDetailView(DetailView):
     context_object_name = "post"
 
     def get_context_data(self, **kwargs):
+        # 下書き以外で最新の10件を表示
         context = super().get_context_data(**kwargs)
         context['posts_all'] = Post.objects.order_by(
             '-created_at').exclude(category__name='Draft')
+        return context
+
+
+class AboutView(CommonListView):
+    model = Post
+    template_name = "about.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = "About"
         return context

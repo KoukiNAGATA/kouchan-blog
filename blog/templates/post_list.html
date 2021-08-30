@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
-{% block title %}こうちゃんブログ。{% endblock %}
+{% block title %}{{title}} - KoukiNAGATA{% endblock %}
+{% block header %}{{title}}{% endblock %}
 
 {% block content %}
 <section class="py-12 overflow-hidden max-w-screen">
 {% for post in posts %}
   <div class="lg:px-12 container mx-auto flex flex-wrap -m-12">
     <div class="p-6 lg:p-12 md:w-3/4 flex flex-col items-start my-4 border-b-2 border-white-800 border-opacity-50">
-      <span class="inline-block py-1 px-2 text-xs font-medium tracking-widest">
+      <span class="inline-block py-1 px-2 text-xs tracking-widest">
         <a href="/{{ post.category }}" class="label-pink">
           {{ post.category }}
         </a>
