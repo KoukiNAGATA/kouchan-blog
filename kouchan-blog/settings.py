@@ -53,9 +53,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django_hosts.middleware.HostsResponseMiddleware',
-]
-
-MIDDLEWARE_CLASSES = [
     'lib.middleware.RedirectCorrectHostname',
 ]
 
@@ -135,7 +132,6 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 db_from_env = dj_database_url.config()
@@ -143,6 +139,8 @@ DATABASES = {
     'default': db_from_env
 }
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+CORRECT_HOST = '127.0.0.1:8000'
 
 ALLOWED_HOSTS = [
     'koukinagata.info',
