@@ -15,7 +15,7 @@
         data-ad-format="auto"
         data-full-width-responsive="true">
       </ins>
-      <p class="mb-8">{{ post.body | markdown | safe | linebreaksbr}}</p>
+      <div class="mb-8 md-detail w-full">{{ post.body | markdown | safe | linebreaksbr}}</div>
       <p class="w-full text-right mb-8">{{ post.created_at }}</p>
       <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-white-800 border-opacity-50 w-full">
         <a class="text-pink-400 inline-flex items-center"  href="{% url 'post_list' %}">

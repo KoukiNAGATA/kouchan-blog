@@ -19,7 +19,7 @@ class Post(models.Model):
         Category, verbose_name='カテゴリー',
         on_delete=models.PROTECT
     )
-    body = MDTextField("本文")
+    body = MDTextField("本文", config_name='md')
     created_at = models.DateTimeField(
         "作成日時", auto_now_add=True,
     )

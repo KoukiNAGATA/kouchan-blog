@@ -110,11 +110,10 @@ h4 {
 }
 
 // markdown
-.attr_list {
+.md-detail {
   img {
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
+    width: 80vw;
+    margin: auto 0;
     border-radius: 4px;
     box-shadow: 0px 1px 6px $text-white-20;
   }
@@ -122,22 +121,6 @@ h4 {
 
 .icon {
   width: 100%;
-}
-
-// コード
-code {
-  width: 100%;
-  font-family: Monaco, Menlo, "Courier New", monospace;
-  font-size: 0.8rem;
-  line-height: 1.4;
-  box-sizing: border-box;
-  display: block;
-  white-space: pre;
-  overflow-x: auto; // はみ出たら横スクロール
-  -webkit-overflow-scrolling: touch;
-  border-radius: 4px;
-  padding: 1.5em;
-  box-shadow: 0px 1px 6px $text-white-20;
 }
 
 // 引用
@@ -188,9 +171,20 @@ ol {
   }
 }
 
-// vscode風
+// vscode風コード
 .hljs {
-  padding: 0.5em;
+  max-width: 80vw;
+  font-family: Monaco, Menlo, "Courier New", monospace;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  box-sizing: border-box;
+  display: block;
+  white-space: pre;
+  overflow-x: auto; // はみ出たら横スクロール
+  -webkit-overflow-scrolling: touch;
+  border-radius: 4px;
+  padding: 1.5em;
+  box-shadow: 0px 1px 6px $text-white-20;
   background: #1e1e1e;
   color: #dcdcdc;
 }
@@ -300,7 +294,6 @@ ol {
   padding: 0;
   background: #fff;
 }
-.entry-content code,
 .entry-content .haiiro {
   border-radius: 0 5px 5px 5px;
 }
