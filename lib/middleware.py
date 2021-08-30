@@ -8,12 +8,22 @@ class RedirectCorrectHostname(object):
     (at heroku domain redirects to custom domain)
     """
 
-    def process_request(self, request):
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        response = self.get_response(request)
+        return response
+
+    def process_view(self, request, view_func, view_args, view_kwargs):
+        # settingsにCORRECT_HOSTがあるか
         if not getattr(settings, 'CORRECT_HOST', None):
             return None
+        # settings.CORRECT_HOSTとアクセスしているhostが一致するか
         if request.get_host() == settings.CORRECT_HOST:
             return None
 
+        # 一致しなかった場合、settings.CORRECT_HOSTにリダイレクト
         return HttpResponsePermanentRedirect(
             '{scheme}://{host}{path}'.format(scheme=request.scheme,
                                              host=settings.CORRECT_HOST,
