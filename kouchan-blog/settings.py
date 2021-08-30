@@ -55,6 +55,10 @@ MIDDLEWARE = [
     'django_hosts.middleware.HostsResponseMiddleware',
 ]
 
+MIDDLEWARE_CLASSES = [
+    'lib.middleware.RedirectCorrectHostname',
+]
+
 ROOT_URLCONF = 'kouchan-blog.urls'
 ROOT_HOSTCONF = 'kouchan-blog.hosts'
 DEFAULT_HOST = 'kouchan-blog'
@@ -158,3 +162,5 @@ if not DEBUG:
     import django_heroku
     django_heroku.settings(locals())
     SECURE_SSL_REDIRECT = True
+    # koukinagata.infoにリダイレクト
+    CORRECT_HOST = 'koukinagata.info'
