@@ -145,7 +145,6 @@ CORRECT_HOST = '127.0.0.1:8000'
 ALLOWED_HOSTS = [
     'koukinagata.info',
     '127.0.0.1',
-    'admin.localhost',
     'localhost'
 ]
 DEBUG = False

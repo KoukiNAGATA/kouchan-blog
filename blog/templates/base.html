@@ -73,7 +73,7 @@
 
       <!-- Sidebar -->
       <aside class="px-6 py-12 w-full lg:w-1/4 text-white container mx-auto sidebar">
-        <h3>新着記事一覧</h3>
+        <h3 class="font-bold">新着記事一覧</h3>
         {% for post in posts_all %}
           <h4 class="lineclamp">
             <a href="{% url 'post_detail' post.id %}" class="text-gray-300">            
@@ -90,8 +90,8 @@
           data-ad-slot="1581217662">
         </ins>
         <!-- Profile -->
-        <h3>Profile</h3>
-        <div class="flex flex-col w-full mx-auto py-4 sidebar__portfolio">
+        <h3 class="font-bold">Profile</h3>
+        <div class="flex flex-col w-full mx-auto py-4 my-4 sidebar__portfolio">
             <picture class="sidebar__portfolio-photo">
               <a href="{% url 'about' %}" class="text-gray-300" alt="Portfolio">
                 <source srcset="{% static 'img/icon.webp' %}" type="image/webp" class="w-2/3 lg:w-1/3 mx-auto" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;" />
@@ -114,8 +114,8 @@
           </div>
         </div>
         <!-- Twitter -->
-        <div class = "twitter-wrapper">
-          <h3>Twitter</h3>
+        <h3 class="font-bold">Twitter</h3>
+        <div>
           <a class="twitter-timeline" data-height="400" data-theme="dark" href="https://twitter.com/NAGATAChannel?ref_src=twsrc%5Etfw">
           </a> 
         </div>
