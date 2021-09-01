@@ -7,3 +7,14 @@ $text-white-20: #dfdfdf33;
 
 $primary: #1f1f1f;
 $primary-90: #1f1f1fee;
+
+// フォント
+@font-face {
+  font-family: "Sawarabi Gothic";
+  src: url("../fonts/SawarabiGothic-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Sawarabi Mincho";
+  src: url("../fonts/SawarabiMincho-Regular.ttf");
+}
