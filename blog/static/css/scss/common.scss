@@ -1,6 +1,7 @@
 // 各ページ共通定義
 .init {
-  font-family: "Sawarabi Gothic";
+  font-family: "Sawarabi Gothic", "Hiragino Kaku Gothic ProN", "Yu Gothic",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   background: #f9f9f9;
   min-width: 100vw;
@@ -40,7 +41,8 @@ a {
 }
 
 p {
-  font-family: "Sawarabi Mincho";
+  font-family: "Sawarabi Mincho", "Hiragino Mincho ProN", "Yu Mincho",
+    "MS PMincho", serif;
   color: #cecece;
 }
 
