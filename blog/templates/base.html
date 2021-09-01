@@ -4,7 +4,8 @@
   <head>
     <title>{% block title %}{% endblock %}</title> 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3053226401219063" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <script src="{% static '/js/highlight/highlight.min.js' %}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
     <link rel="dns-prefetch" href="//fonts.googleapis.com/">
     <link rel="dns-prefetch" href="//fonts.gtatic.com/">
@@ -180,9 +181,6 @@
 </html>
 <!-- Twitter -->
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
 <!-- mathjax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
